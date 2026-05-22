@@ -583,6 +583,13 @@ export default function App() {
                 </div>
               </motion.div>
 
+              {/* Disclaimer regarding printing costs */}
+              <motion.div className="pricing-disclaimer" variants={scaleVariants}>
+                <span className="disclaimer-badge">Disclaimer</span>
+                <p>
+                  Please note that the fees listed above cover <strong>design, layout typography, prepress calibration, and printer coordination services only</strong>. The physical printing production costs (including paper stock, binding, cover embossing, and gilded edge finishing) are not included and will be billed directly by the selected print production house.
+                </p>
+              </motion.div>
 
               {/* Billing Schedule / Milestones */}
               <div className="billing-schedule">
