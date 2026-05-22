@@ -1,0 +1,97 @@
+/* ==========================================================================
+   DESIGN SYSTEM & VARIABLES (LIGHT/DARK MODES)
+   ========================================================================== */
+:root {
+  /* HSL Colors - Light Mode (Ivory, Forest Green & Gold) */
+  --bg-hue: 40;
+  --bg-sat: 25%;
+  --bg-light: 98%;
+  --color-bg: hsl(var(--bg-hue), var(--bg-sat), var(--bg-light));
+  --color-bg-alt: hsl(var(--bg-hue), 15%, 94%);
+  --color-primary: #1b4332;
+  --color-primary-dark: #081c15;
+  --color-primary-light: #40916c;
+  --color-accent: #c5a850;
+  --color-accent-light: #dfcb91;
+  --color-orange: #f97316;
+  --color-text: #222524;
+  --color-text-light: #5f6663;
+  --color-border: rgba(197, 168, 80, 0.25);
+  --color-border-hover: rgba(197, 168, 80, 0.5);
+  
+  --shadow-soft: 0 8px 30px rgba(27, 67, 50, 0.05);
+  --shadow-premium: 0 20px 50px rgba(27, 67, 50, 0.08);
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+[data-theme="dark"] {
+  /* HSL Colors - Dark Mode (Deep Charcoal-Green) */
+  --color-bg: #090e0c;
+  --color-bg-alt: #101714;
+  --color-primary: #52b788;
+  --color-primary-dark: #fdfcf9;
+  --color-primary-light: #74c69d;
+  --color-accent: #dfcb91;
+  --color-accent-light: #eaddb6;
+  --color-text: #eae8e1;
+  --color-text-light: #9ba7a2;
+  --color-border: rgba(223, 203, 145, 0.15);
+  --color-border-hover: rgba(223, 203, 145, 0.35);
+  
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Typography elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Smooth active highlight transitions */
+a, button {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Web container scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-alt);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-light);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
