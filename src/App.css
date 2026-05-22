@@ -596,9 +596,9 @@
 
 /* Essential tier — lighter treatment */
 .tier-essential {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-bg);
   color: var(--color-text);
-  border-color: var(--color-border);
+  border: 2px solid var(--color-border);
 }
 
 .tier-essential .price-card-header h4 {
@@ -606,7 +606,9 @@
 }
 
 .tier-essential .price-card-header p {
-  color: var(--color-text-light);
+  color: var(--color-text);
+  font-weight: 400;
+  opacity: 0.95;
 }
 
 .tier-essential .price-card-badge {
@@ -615,26 +617,38 @@
 }
 
 .tier-essential .pricing-row {
-  background-color: rgba(27, 67, 50, 0.04);
-  border-color: var(--color-border);
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
 }
 
 .tier-essential .old-price-val {
-  color: var(--color-text-light);
+  color: var(--color-text);
+  opacity: 0.75;
 }
 
 .tier-essential .new-price-val {
+  color: var(--color-primary-light);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .tier-essential .new-price-val {
   color: var(--color-primary);
-  font-size: 1.8rem;
 }
 
 .tier-essential .price-box-label {
-  color: var(--color-text-light);
+  color: var(--color-text);
+  font-weight: 500;
 }
 
 .tier-essential .arrow-icon-col {
   color: var(--color-primary-light);
 }
+
+.tier-essential .price-deliverables .deliv-item {
+  color: var(--color-text);
+}
+
 
 /* Premium tier — dark treatment (default) */
 .tier-premium .price-card-badge {

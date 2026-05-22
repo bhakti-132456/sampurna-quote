@@ -628,27 +628,6 @@ export default function App() {
 
       </div>
 
-      {/* Floating Bottom Quick Action Bar (Mobile Premium UX) */}
-      <motion.div 
-        className="floating-action-bar"
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 100, damping: 20 }}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', flex: 1, paddingLeft: '0.5rem' }}>
-          <span style={{ fontSize: '0.6rem', textTransform: 'uppercase', color: 'var(--color-text-light)', letterSpacing: '0.05em' }}>Estimated Investment</span>
-          <span style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--color-accent)' }}>From INR {essentialPrice.toLocaleString('en-IN')}</span>
-        </div>
-        <motion.button 
-          className="btn-premium btn-primary"
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-          onClick={handlePrint}
-        >
-          <Printer size={15} />
-          <span>Save PDF</span>
-        </motion.button>
-      </motion.div>
     </div>
   );
 }
