@@ -594,21 +594,21 @@
   gap: 2.5rem;
 }
 
-/* Essential tier — lighter treatment */
+/* Essential tier — cohesive dark green background in light mode */
 .tier-essential {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  border: 2px solid var(--color-border);
+  background-color: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border);
 }
 
 .tier-essential .price-card-header h4 {
-  color: var(--color-primary-dark);
+  color: #ffffff;
 }
 
 .tier-essential .price-card-header p {
-  color: var(--color-text);
-  font-weight: 400;
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  opacity: 1;
 }
 
 .tier-essential .price-card-badge {
@@ -617,36 +617,89 @@
 }
 
 .tier-essential .pricing-row {
-  background-color: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .tier-essential .old-price-val {
-  color: var(--color-text);
-  opacity: 0.75;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
 }
 
 .tier-essential .new-price-val {
-  color: var(--color-primary-light);
+  color: var(--color-accent);
   font-size: 2rem;
   font-weight: 700;
 }
 
-[data-theme="dark"] .tier-essential .new-price-val {
-  color: var(--color-primary);
-}
-
 .tier-essential .price-box-label {
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
 }
 
 .tier-essential .arrow-icon-col {
-  color: var(--color-primary-light);
+  color: var(--color-accent);
 }
 
 .tier-essential .price-deliverables .deliv-item {
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tier-essential .price-deliverables .deliv-item svg {
+  color: var(--color-accent);
+}
+
+/* 
+   Dark mode overrides: Since both cards (Essential & Premium) have a white background (#fdfcf9) in dark mode,
+   we make all texts, badges, arrows, and ticks dark green/slate to ensure absolute legibility.
+*/
+[data-theme="dark"] .premium-price-box {
+  background-color: var(--color-primary-dark) !important;
+  color: #1b4332 !important;
+  border: 1px solid rgba(27, 67, 50, 0.15) !important;
+}
+
+[data-theme="dark"] .premium-price-box .price-card-header h4 {
+  color: #081c15 !important;
+}
+
+[data-theme="dark"] .premium-price-box .price-card-header p {
+  color: #4a5752 !important;
+}
+
+[data-theme="dark"] .premium-price-box .pricing-row {
+  background-color: rgba(27, 67, 50, 0.04) !important;
+  border: 1px solid rgba(27, 67, 50, 0.08) !important;
+}
+
+[data-theme="dark"] .premium-price-box .price-box-label {
+  color: #4a5752 !important;
+}
+
+[data-theme="dark"] .premium-price-box .old-price-val {
+  color: #5f6663 !important;
+  opacity: 0.85 !important;
+}
+
+[data-theme="dark"] .premium-price-box .new-price-val {
+  color: #1b4332 !important;
+}
+
+[data-theme="dark"] .premium-price-box .arrow-icon-col {
+  color: #1b4332 !important;
+}
+
+[data-theme="dark"] .premium-price-box .price-deliverables .deliv-item {
+  color: #1b4332 !important;
+}
+
+[data-theme="dark"] .premium-price-box .price-deliverables .deliv-item svg {
+  color: #1b4332 !important;
+}
+
+[data-theme="dark"] .premium-price-box .price-card-badge {
+  background-color: #1b4332 !important;
+  color: #ffffff !important;
 }
 
 
